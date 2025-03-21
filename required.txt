@@ -1,0 +1,23 @@
+Updates: Project Presentations
+
+Hi everyone,
+
+Please note the following details about the project presentations:
+
+The presentation schedule is available here: [Google Spreadsheet Link]
+
+All project presentations are due on March 23rd at 11:59 PM. Note that the on-time submission of your project presentation either as a PDF or PPT on Canvas by the deadline earns you 3% of the total grade for the Project Presentation (15%). The rest of the 15% is for the submission of peer review comments (7.5%) and the average scores you receive from your peers (4%). These details are present in the updated syllabus on Canvas.
+
+Your project presentation should be 15-20 minutes long. We can also take questions at the end of each presentation. The presentations can be in any template or style, but should contain the following sections:
+
+Introduction: Introduce the paper and the research problems/questions studied. You should motivate the problem (e.g., with examples from the paper).
+Related Works: Provide a description of the related literature and how the given paper bridges gaps in existing work.
+Experimental Design: Describe the experimental setup undertaken by the authors to answer the research questions outlined in the introduction.
+Datasets: Detail the datasets used in the paper and explain their attributes.
+What Was Easy: Discuss what was easy to implement to reproduce the work given the paper’s codebase.
+What Was Hard: Discuss what was hard to implement to reproduce the work given the paper’s codebase.
+Reproduced Results on Original Datasets: Compare and contrast the results you obtain with the results in the paper. You can provide insights on why the results are either as expected or why they have variations from the published ones (e.g., because the original version of the datasets was archived and you had to use a newer version).
+Results on New Datasets: Utilize 2-3 new datasets with the approach to new datasets of your choosing. This can (and should) be an innovative choice, such as changing data domains (e.g., from text to vision), changing the scale of the dataset (e.g., considering datasets with a larger number of samples or features compared to the original datasets), increasing problem complexity (e.g., if the original approach was tested on binary classification, you can test on multi-class classification), among other similar considerations.
+Key Takeaways: Summarize your findings and key learnings from your experiments on reproducing this work.
+More details on the peer review process will be provided next week in a separate announcement. Basically, you will have a Google Sheet to fill out and grade the presentations for the day along different scoring dimensions. You can only grade presentations if you are physically present in that session. More details to follow.
+
