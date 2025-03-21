@@ -105,6 +105,7 @@ class Attack:
 #                                                   channel_axis=0
                                                  )
         self.attack = get_attack_callable(self.name, self.ds, attack_kwargs, self.device)
+        print(f"[DEBUG] DeepFool attack configured with: {attack_kwargs}")
         self.attack_call_kwargs = attack_call_kwargs
     
     def generate_images(self, data_loaders, portion, fraction, epoch):

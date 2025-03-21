@@ -42,7 +42,6 @@ class RegularizedLoss:
             self.gamma = gamma
             self.name += '_robust_beta_{}_gamma_{}'.format(self.beta, self.gamma)
 
-        print (self.name)
 
         self.regularization_terms_batch_train, self.cross_entropy_losses_batch_train, self.total_loss_batch_train = [], [], []
         self.regularization_terms_batch_test, self.cross_entropy_losses_batch_test, self.total_loss_batch_test = [], [], []
@@ -110,9 +109,6 @@ class RegularizedLoss:
             grad_minority.view(grad_minority.shape[0], -1), dim=1)
         d_approx_majority = torch.abs(output_class_logits_majority).float()/torch.norm(
             grad_majority.view(grad_majority.shape[0], -1), dim=1)
-        
-        print (d_approx_minority.shape, d_approx_majority.shape,
-            torch.mean(d_approx_minority).item(), torch.mean(d_approx_majority).item())
 
         if self.probabilities:
             if self.sigmoid_approx:
