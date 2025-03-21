@@ -38,7 +38,7 @@ from adversarial import Attack, AttackV2
 
 PHASES = ['train', 'test']
 batch_size = 100
-learning_rate = 0.01
+learning_rate = 0.001  # instead of 0.01
 aggregate_coeff = 5
 
 def main(dataset, gpu, epochs, model_names, with_regularization=False, taus=None, alphas=None, 

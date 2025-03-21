@@ -40,7 +40,7 @@ aggregate_coeff = 5
 paper_friendly_plots = True
 
 def set_paper_friendly_plots_params():
-    plt.style.use('seaborn-paper')
+    plt.style.use('default')
     plt.rcParams['font.size'] = 10
     plt.rcParams['axes.labelsize'] = 22
     plt.rcParams['axes.labelweight'] = 'bold'

@@ -49,7 +49,6 @@ paper_friendly_plots = True
 # In[ ]:
 
 def set_paper_friendly_plots_params():
-    plt.style.use('seaborn-paper')
     plt.rcParams['font.size'] = 10
     plt.rcParams['axes.labelsize'] = 22
     plt.rcParams['axes.labelweight'] = 'bold'

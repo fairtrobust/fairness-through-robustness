@@ -112,8 +112,9 @@ class Attack:
         all_images_adversarial, all_adv_preds, adv_image_ids = None, np.array([]), np.array([])
         total_possible_adv, created_adv = 0, 0
         for idx, (image_ids, inputs, labels, protected_class) in enumerate(data_loaders[portion]):
+            if idx > 0:
+              break
             print('Epoch: {} of {}'.format(idx+1, len(data_loaders[portion])))
-
             print(f'Data: {self.ds.name.lower()}, Model: {self.model.model_name.lower()}')
             # Resize inputs to the expected dimensions (224x224 for AlexNet) if the self.model_name.lower() doesn't include 'mlp1' or 'deep_cnn'
             if self.ds.name.lower() == 'cifar10' and not ('mlp1' in self.model.model_name.lower() or 'deep_cnn' in self.model.model_name.lower()):

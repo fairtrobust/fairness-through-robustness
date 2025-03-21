@@ -33,7 +33,7 @@ from adversarial import Attack, AttackV2
 
 
 PHASES = ['train', 'test']
-batch_size = 500
+batch_size = 100  # reduce number of batches
 learning_rate = 0.01
 aggregate_coeff = 5
 
@@ -44,9 +44,9 @@ def main(dataset, gpu, model_names, epochs, taus=[None], alphas=[None], with_reg
     device = torch.device('cuda:{}'.format(gpu))
 
     attack_names = ['DeepFool']
-    attack_fractions = [0.01, 0.01]
+    attack_fractions = [0.005]
     # attack_kwargs = [{'steps': 100}, {'steps': 100, 'random_start': True}]
-    attack_kwargs = [{}] #, {}]
+    attack_kwargs = [{'steps': 2}]
     # Caution: these epsilon values are only for CIFAR10
     attack_call_kwargs = [{'epsilons': 3}] # , {}]
     # [{attack_name: (param_1, param_2 ....), attack_name: (param_1, param_2 ....),}, {}]
@@ -198,7 +198,7 @@ if __name__=="__main__":
                 if cur_val == 'all':
                     args_dict[cur_arg.lstrip('--')] = np.arange(0, 100, aggregate_coeff)
                 else:
-                    args_dict[cur_arg.lstrip('--')] = [cur_val]
+                  args_dict[cur_arg.lstrip('--')] = [int(x) for x in cur_val.split(',')]
             elif 'taus' in cur_arg or 'alphas' in cur_arg or 'betas' in cur_arg or 'gammas' in cur_arg:
                 args_dict[cur_arg.lstrip('--')] = [float(x) for x in cur_val.split(',')]
                 print (cur_arg, args_dict[cur_arg.lstrip('--')])

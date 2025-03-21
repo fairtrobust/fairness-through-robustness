@@ -40,7 +40,6 @@ aggregate_coeff = 5
 paper_friendly_plots = True
 
 def set_paper_friendly_plots_params():
-    plt.style.use('seaborn-paper')
     plt.rcParams['font.size'] = 10
     plt.rcParams['axes.labelsize'] = 22
     plt.rcParams['axes.labelweight'] = 'bold'
@@ -69,7 +68,7 @@ def main(dataset_reg, dataset_original, gpu, model_name_reg, model_name_original
     ds_obj_reg, _, _ = \
         hp.get_data_loder_objects(dataset_reg, PHASES, **hp.get_loader_kwargs(batch_size))
 
-    taus = np.linspace(0.0, 2.0, 2000)
+    taus = np.linspace(0.0, 2.0, 50)
 
     for epoch in epochs:
 
